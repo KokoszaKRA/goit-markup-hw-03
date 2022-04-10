@@ -1,5 +1,5 @@
 :root {
-  --main-font: font-family: 'Roboto', sans-serif;;
+  --msin-font: 'Roboto';
   --secondery-font:font-family: 'Raleway', sans-serif;
   --main-color: #757575; 
   --color-black: #212121;
@@ -9,8 +9,9 @@
   }
   
   body {
-  font-family:var(--main-font);
+  font-family:"var(--msin-font)";
   color:var(--main-color);
+  margin:auto;
   }
   
   h1,
@@ -49,7 +50,7 @@
   
   .about-navigation{
   width: 1200px;
-  padding: 32px 15px:
+  padding: 32px 15px;
   height: 80px;
   margin: 0 auto;
   align-items:center;
@@ -196,7 +197,6 @@
 
   .portfolio-btn-item{
     text-align: center;
-    pading:0;
   } 
   
   .portfolio-category-list{
@@ -422,8 +422,7 @@
   }
   
   .list-btn-item{
-  font-famili:var(--main-font);
-  font-weight: 500;
+   font-weight: 500;
   font-size: 16px;
   line-height: 1.625;
   text-align: center;
@@ -489,7 +488,6 @@
   line-height: 1.5;
   letter-spacing: 0.03em;
   color: var(--main-color);
-  font-family:var(--main-font);
   }
   
   .footer-address{
