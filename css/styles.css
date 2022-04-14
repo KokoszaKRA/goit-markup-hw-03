@@ -10,8 +10,8 @@
 }
 
 body {
-  font-family: var(--main-font);
-  color: var(--main-color);
+  font-family: 'Roboto';
+  color: #757575;
   box-sizing: border-box;
 }
 
