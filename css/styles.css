@@ -211,11 +211,15 @@ img {
   display: flex;
   flex-direction: column;
   padding: 0 auto;
+}
 
+.section-discription-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .article-title {
   display: flex;
+  margin-bottom: 10px;
 
   font-style: normal;
   font-weight: 700;
