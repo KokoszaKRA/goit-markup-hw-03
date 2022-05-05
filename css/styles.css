@@ -55,11 +55,9 @@ img {
 }
 
 .container {
-  width: 1200px;
+  min-width: 1200px;
   align-items: center;
   justify-content: center;
-  /* margin-right: auto;
-  margin-left: auto; */
   padding: 0 15px;
 }
 
@@ -140,13 +138,12 @@ img {
 
 /* ============== END NAVIGATION ==============  */
 /* ===========   SECTION ORDERS =============== */
-.section-orders .container {
-  display: flex;
-}
+
 
 .section-orders {
   background-color: var(--color-background);
   margin-bottom: 94px;
+  display: flex;
 }
 
 .conteiner-order-list {
@@ -196,6 +193,7 @@ img {
 /* =============== DISCRIPTION 4X   ================ */
 .article-list {
   display: flex;
+  width: 1200px;
 }
 
 .section-discription {
@@ -203,9 +201,6 @@ img {
   margin-bottom: 94px;
 }
 
-.section-discription .container {
-  justify-content: space-between;
-}
 
 .section-discription-item {
   display: flex;
