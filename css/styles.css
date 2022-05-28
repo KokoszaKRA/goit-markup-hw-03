@@ -1,9 +1,9 @@
 :root {
   --main-font: font-family: 'Roboto', sans-serif;
   ;
-  --secondery-font: font-family: 'Raleway', sans-serif;
-  --main-color: #757575;
-  --color-black: #212121;
+  --secondery-font: font-family: 'Raleway', sans-serif; 
+ --main-color: #212121;
+  --second-color: #757575;
   --color-blue: #2196F3;
   --color-background: #2F303A;
   --color-white: #FFF;
@@ -11,8 +11,7 @@
 
 body {
   font-family: 'Roboto';
-  color: #757575;
-  box-sizing: border-box;
+  color: var(--main-color);
 }
 
 h1,
@@ -54,63 +53,83 @@ img {
   font-style: none;
 }
 
+
 .container {
-  min-width: 1200px;
-  align-items: center;
-  justify-content: center;
+  width: 1200px;
+  margin: 0 auto;
   padding: 0 15px;
+  /* outline: 2px dashed #f44336; */
 }
 
-.wraper-center {
+.header{
+  padding-top: 24px;
+  padding-bottom: 25px;  
+  border-bottom: 1px solid #ECECEC;
+  /* outline: 2px dashed rgb(37, 190, 37); */
+}
+
+.header .container{
   display: flex;
-  justify-content: center;
-  /* align-items: center; */
+  align-items: center;
+}
+
+.footer{
+  padding-top: 60px;
+  padding-bottom: 60px;
+  /* outline: 2px dashed rgb(37, 190, 37); */
+}
+
+.portfolio{
+  padding-top: 94px;
+  padding-bottom: 94px;
+  /* outline: 2px dashed rgb(37, 190, 37); */
+}
+
+.orders{
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background-color: var(--color-background);
+  text-align: center;
+  /* outline: 2px dashed rgb(37, 190, 37); */
+}
+
+.discription,
+.whot-we-do,
+.team
+{
+  padding-top: 94px;
+  padding-bottom: 94px;
+  /* outline: 2px dashed rgb(37, 190, 37); */
 }
 
 /* ============ HEDER ============== */
 
-.header .container {
-  display: flex;
-  padding-top: 24px;
-  padding-bottom: 25px;
-  border-bottom: 1px solid #ECECEC;
-}
-
-.navigation {
-  display: flex;
-}
-
-.navigation-list {
-  display: flex;
-  align-items: center;
-}
-
-.header-address-list {
-  display: flex;
-}
 
 .logo {
   padding-right: 93px;
+}
+
+.header-address .header-address-link {
+  color: var(--second-color);
+}
+
+.header-mail{
+  
 }
 
 .navigation-list-item:not(:last-child) {
   margin-right: 46px;
 }
 
-.header .header-address {
-  margin-left: auto;
+.navigation-list,
+.header-address-list{
+  display: flex;
 }
 
-.header-tel {
-  margin-left: 50px;
+.header-address-item:first-child {
+  margin: 0 50px 0 364px; 
 }
 
-.header-address .header-address-list {
-  justify-content: center;
-}
-
-/* =================  END HEADER  =============== */
-/* ================= NAVIGATION ===============  */
 .navigation-list-link,
 .header-address-link {
   text-decoration: none;
@@ -119,7 +138,7 @@ img {
   font-size: 14px;
   line-height: 1.142;
   letter-spacing: 0.02em;
-  color: var(--color-black);
+  color: var(--main-color);
 }
 
 .footer-address-link:hover,
@@ -132,38 +151,9 @@ img {
   color: var(--color-blue);
 }
 
-.header-address-link {
-  color: var(--main-color);
-}
-
 /* ============== END NAVIGATION ==============  */
 /* ===========   SECTION ORDERS =============== */
-
-
-.section-orders {
-  background-color: var(--color-background);
-  margin-bottom: 94px;
-  display: flex;
-}
-
-.conteiner-order-list {
-  height: 600px;
-  display: flex;
-  flex-direction: column;
-}
-
-.container-order-item {
-  display: flex;
-  justify-content: center;
-}
-
-.conteiner-order-title {
-  width: 696px;
-  height: 120px;
-  margin-top: 200px;
-  margin-bottom: 30px;
-
-  font-style: normal;
+.order-title {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.363;
@@ -173,50 +163,39 @@ img {
   color: var(--color-white);
 }
 
-.conteiner-order-btn {
-  margin-bottom: 200px;
-
+.order-btn {
   width: 200px;
   height: 50px;
+
+  margin-top: 30px;
+  /* margin: 30px auto auto; */
+
   color: var(--color-white);
   background: #2196F3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  border: none;
+  
 }
 
-.conteiner-order-btn:hover,
-.conteiner-order-btn:focus {
+.order-btn:hover,
+.order-btn:focus {
   cursor: pointer;
 }
 
 /* =========== END  SECTION ORDERS =============== */
 /* =============== DISCRIPTION 4X   ================ */
-.article-list {
+.discription__list {
   display: flex;
-  width: 1200px;
+  justify-content: space-between;
+}
+.discription__item{
+  max-width: 270px;
 }
 
-.section-discription {
-  margin-top: 94px;
-  margin-bottom: 94px;
-}
-
-
-.section-discription-item {
-  display: flex;
-  flex-direction: column;
-  padding: 0 auto;
-}
-
-.section-discription-item:not(:last-child) {
-  margin-right: 30px;
-}
-
-.article-title {
-  display: flex;
+.discription__title {
   margin-bottom: 10px;
 
-  font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.142;
@@ -226,23 +205,17 @@ img {
   color: var(--color-black);
 }
 
-.article-text {
-  display: flex;
-
-  font-style: normal;
-  font-weight: 400;
+.discription__text {
   font-size: 14px;
   line-height: 1.5;
   letter-spacing: 0.03em;
   display: block;
+  color: var(--second-color);
 }
 
 /* =============== END DISCRIPTION 4X   ================ */
 
 /* ================== WHOT WE DO ======================== */
-.section-whot-we-do {
-  margin-bottom: 94px;
-}
 
 .whot-we-do-picture-list {
   display: flex;
@@ -260,19 +233,16 @@ img {
 /* ================== END WHOT WE DO =================== */
 
 /* ========================= TEM =========================*/
-.tean-picture-list {
+.team__list{
+  display: flex;
   justify-content: space-between;
-  margin-bottom: 94px;
 }
 
-.section-team-item {
+.team__item {
   width: 270px;
   height: 368px;
-  left: 215px;
-  top: 1635px;
 
   background: var(--color-white);
-  /* material shadow v1 */
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -280,15 +250,12 @@ img {
   border-radius: 0px 0px 4px 4px;
 }
 
-.section-team {
+.team {
   background-color: #F5F4FA;
 }
 
 .agencja-main-category {
-  margin-top: 94px;
-  margin-bottom: 50px;
-
-  font-style: normal;
+  padding-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.166;
@@ -297,32 +264,27 @@ img {
   color: var(--color-black);
 }
 
-.person-name {
+.team__name {
   text-align: center;
   margin-top: 30px;
   margin-bottom: 10px;
 
-  font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.187;
   letter-spacing: 0.03em;
 
   color: var(--color-black);
-  font-family: 'Roboto';
 }
 
-.person-position {
+.team__position {
   text-align: center;
   margin-bottom: 30px;
 
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.187;
   letter-spacing: 0.03em;
-
-  color: var(--main-color);
-  font-family: 'Roboto';
+  color: var(--second-color);
 }
 
 /* ======================= END TEM =======================*/
@@ -331,19 +293,18 @@ img {
 
 .logo,
 .footer-logo {
-  /* width: 145px;
-height: 31px; */
-  /* left: 215px;
-top: 24px; */
-
   font-family: 'Raleway';
-  font-style: normal;
   text-decoration: none;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.192;
   letter-spacing: 0.03em;
   color: var(--color-black);
+}
+
+.footer-logo{
+  display: block;
+  padding-bottom: 20px;
 }
 
 .logo-span {
@@ -359,22 +320,17 @@ top: 24px; */
 
 
 /* =============================== BUTON PORTFOLIO =================== */
-
-.section-categories {
-  margin-top: 94px;
-  margin-bottom: 50px;
-}
-
-.list-btn {
+.portfolio-btns__list {
   display: flex;
   justify-content: center;
+  padding-bottom: 50px;
 }
 
-.list-btn-item:not(:last-child) {
+.portfolio-btns__item:not(:last-child) {
   margin-right: 8px;
 }
 
-.portfolio-btn {
+.portfolio-btns__btn {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.625;
@@ -384,8 +340,8 @@ top: 24px; */
   color: #212121;
 }
 
-.portfolio-btn:hover,
-.portfolio-btn:focus {
+.portfolio-btns__btn:hover,
+.portfolio-btns__btn:focus {
   cursor: pointer;
 
   background: var(--color-blue);
@@ -397,12 +353,6 @@ top: 24px; */
   border-radius: 4px;
 }
 
-.portfolio-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0;
-  list-style: none;
-}
 
 .wszystkie {
   width: 121px;
@@ -452,13 +402,11 @@ top: 24px; */
   height: 36px;
   margin: 20px auto 2px auto;
 
-  font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--color-black);
-  font-family: 'Roboto';
 }
 
 .portfolio-pictue-name {
@@ -466,16 +414,10 @@ top: 24px; */
   height: 30px;
   margin: 2px auto 20px auto;
 
-  font-style: normal;
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.875;
   letter-spacing: 0.03em;
-  font-family: 'Roboto';
-}
-
-.section-categoryies-pictures {
-  margin-bottom: 94px;
+  color: var(--second-color);
 }
 
 /* =============================== END PHOTO PORTFOLIO =================== */
@@ -486,34 +428,25 @@ top: 24px; */
   margin-bottom: 9px;
 }
 
-footer {
+.footer {
   background-color: var(--color-background);
 }
 
 .footer-address-link {
   text-decoration: none;
   font-style: normal;
-  font-weight: 400;
   font-size: 14px;
   line-height: 1.5;
   letter-spacing: 0.03em;
-  color: var(--color-white);
+  color: #ffffff60;
 }
 
-
-
-.footer-address-link[href^="mail"] {
+.footer-address-link--style {
   text-decoration: underline;
 }
 
-.footer .container {
-  height: 252px;
-}
-
-.footer-logo {
-  display: flex;
-  margin-top: 60px;
-  margin-bottom: 20px;
+.footer-address-link--color{
+  color: var(--color-white);
 }
 
 /* ==================== END FOOTER ==================== */
