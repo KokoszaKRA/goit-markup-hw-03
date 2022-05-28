@@ -93,7 +93,10 @@ img {
   /* outline: 2px dashed rgb(37, 190, 37); */
 }
 
-.discription,
+.discription{
+  padding-top: 94px;
+}
+
 .whot-we-do,
 .team
 {
