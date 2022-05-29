@@ -55,7 +55,8 @@ img {
 
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 15px;
   /* outline: 2px dashed #f44336; */
@@ -95,6 +96,7 @@ img {
 
 .discription{
   padding-top: 94px;
+  /* outline: 2px dashed rgb(37, 190, 37); */
 }
 
 .whot-we-do,
@@ -112,16 +114,19 @@ img {
   padding-right: 93px;
 }
 
-.header-address .header-address-link {
+.header-address-link {
   color: var(--second-color);
+  display:block;
+  min-width: 110px;
 }
 
-.header-mail{
-  
+.header-address{
+  margin-left: auto;
+  padding-left: 93px;
 }
 
-.navigation-list-item:not(:last-child) {
-  margin-right: 46px;
+.header-address-item:first-child {
+  margin-right: 50px; 
 }
 
 .navigation-list,
@@ -129,11 +134,17 @@ img {
   display: flex;
 }
 
-.header-address-item:first-child {
-  margin: 0 50px 0 364px; 
+
+.navigation__item:not(:last-child) {
+  margin-right: 46px;
 }
 
-.navigation-list-link,
+
+.navigation__link{
+  color: var(--main-color);
+}
+
+.navigation__link,
 .header-address-link {
   text-decoration: none;
   font-style: normal;
@@ -141,15 +152,15 @@ img {
   font-size: 14px;
   line-height: 1.142;
   letter-spacing: 0.02em;
-  color: var(--main-color);
+ 
 }
 
 .footer-address-link:hover,
 .footer-address-link:focus,
 .header-address-link:hover,
 .header-address-link:focus,
-.navigation-list-link:hover,
-.navigation-list-link:focus {
+.navigation__link:hover,
+.navigation__link:focus {
   cursor: pointer;
   color: var(--color-blue);
 }
@@ -157,6 +168,7 @@ img {
 /* ============== END NAVIGATION ==============  */
 /* ===========   SECTION ORDERS =============== */
 .order-title {
+  max-width: 696px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.363;
@@ -164,6 +176,8 @@ img {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--color-white);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .order-btn {
@@ -192,8 +206,13 @@ img {
   display: flex;
   justify-content: space-between;
 }
+
 .discription__item{
   max-width: 270px;
+}
+
+.discription__item:not(:last-child){
+  margin-right: 30px;
 }
 
 .discription__title {
@@ -220,17 +239,13 @@ img {
 
 /* ================== WHOT WE DO ======================== */
 
-.whot-we-do-picture-list {
+.whot-we-do__list {
   display: flex;
-  justify-content: center;
-}
-
-.whot-we-do-picture-item {
-  display: flex;
-}
-
-.whot-we-do-picture-list {
   justify-content: space-between;
+}
+
+.whot-we-do__item:not(:last-child){
+  margin-right: 30px;
 }
 
 /* ================== END WHOT WE DO =================== */
@@ -239,6 +254,10 @@ img {
 .team__list{
   display: flex;
   justify-content: space-between;
+}
+
+.team__item:not(:last-child){
+  margin-right: 30px;
 }
 
 .team__item {
@@ -387,17 +406,25 @@ img {
 /* ================================== PHOTO PORTFOLIO =================== */
 
 
-.portfolio-category-list {
+.portfolio-category__list {
   display: flex;
   justify-content: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-right: -30px;
+  margin-bottom: -30px;
 }
 
-.portfolio-category-items:nth-child(3n) {
+.portfolio-category__item{
+  margin-right: 30px;
+  margin-bottom: 30px;
   display: flex;
   flex-wrap: wrap;
   flex-basis: auto;
+}
+
+.portfolio-category__figcaption{
+  border: 1px solid #EEEEEE;
 }
 
 .portfolio-picture-title {
