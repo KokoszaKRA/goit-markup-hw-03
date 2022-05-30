@@ -123,10 +123,12 @@ img {
 .header-address{
   margin-left: auto;
   padding-left: 93px;
+  margin-right: 12px;
 }
 
 .header-address-item:first-child {
-  margin-right: 50px; 
+  margin-right: 50px;
+  
 }
 
 .navigation-list,
@@ -256,6 +258,11 @@ img {
   justify-content: space-between;
 }
 
+.team__figcaption{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 .team__item:not(:last-child){
   margin-right: 30px;
 }
@@ -272,9 +279,6 @@ img {
   border-radius: 0px 0px 4px 4px;
 }
 
-.team {
-  background-color: #F5F4FA;
-}
 
 .agencja-main-category {
   padding-bottom: 50px;
@@ -288,7 +292,6 @@ img {
 
 .team__name {
   text-align: center;
-  margin-top: 30px;
   margin-bottom: 10px;
 
   font-weight: 500;
@@ -424,13 +427,18 @@ img {
 }
 
 .portfolio-category__figcaption{
-  border: 1px solid #EEEEEE;
+  max-width: 370px;
+  padding: 20px 24px;
+  border-left: 1px solid #EEEEEE;
+  border-right: 1px solid #EEEEEE;
+  border-bottom: 1px solid #EEEEEE;
 }
 
 .portfolio-picture-title {
   width: 322px;
   height: 36px;
-  margin: 20px auto 2px auto;
+  
+  
 
   font-weight: 700;
   font-size: 18px;
@@ -442,7 +450,6 @@ img {
 .portfolio-pictue-name {
   width: 322px;
   height: 30px;
-  margin: 2px auto 20px auto;
 
   font-size: 16px;
   line-height: 1.875;
